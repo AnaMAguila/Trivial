@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivial</title>
+
+    <script defer src="./js/classPregunta.js"></script>
+    <script defer src="./js/classJugador.js"></script>
+    <script defer src="./js/preguntas.js"></script>
+    <script defer src="./js/main.js"></script>
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div id="jugador1" class="contadorJug" style="display: none;">
+        <p id="nombreJugador1"></p>
+        <p id="puntJug1"></p>
+    </div>
+    <div id="jugador2" class="contadorJug" style="display: none;">
+        <p id="nombreJugador2"></p>
+        <p id="puntJug2"></p>
+    </div>
+    <div id="jugador3" class="contadorJug" style="display: none;">
+        <p id="nombreJugador3"></p>
+        <p id="puntJug3"></p>
+    </div>
+    <div id="jugador4" class="contadorJug" style="display: none;">
+        <p id="nombreJugador4"></p>
+        <p id="puntJug4"></p>  
+    </div>
+    
+    <div class="contenedor">
+        <div class="elemento">
+            <div id="div_jugadores">
+                ¿Quién se apunta a jugar?
+                <br><input type="text" id="inputJugador1" class="myInput" placeholder="NOMBRE JUGADOR 1">
+                <br><input type="text" id="inputJugador2" class="myInput" placeholder="NOMBRE JUGADOR 2">
+                <br><input type="text" id="inputJugador3" class="myInput" placeholder="NOMBRE JUGADOR 3">
+                <br><input type="text" id="inputJugador4" class="myInput" placeholder="NOMBRE JUGADOR 4">
+            </div>            
+
+            <br><input type="button" id="startGame" onclick="comienzaElJuego()" value="JUGAR" class="neon-button">
+
+            <div id="juego" style="display: none;">
+                <p id="categoria"></p>
+                <p id="pregunta"></p>
+                <p><input type="button" id="botonRespuesta1" class="myButton" onclick="respuestaJugador(1)"></p>
+                <p><input type="button" id="botonRespuesta2" class="myButton" onclick="respuestaJugador(2)"> </p>
+                <p><input type="button" id="botonRespuesta3" class="myButton" onclick="respuestaJugador(3)"></p>
+                <p><input type="button" id="botonRespuesta4" class="myButton" onclick="respuestaJugador(4)"></p>           
+            
+                <p id="respuesta"> </p>
+                <input type="button" id="siguientePregunta" onclick="muestraPregunta()" class="neon-button peque" value="SIGUIENTE PREGUNTA">
+            </div> 
+        </div>  
+    </div> 
+</body>
+</html>
